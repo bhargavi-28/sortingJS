@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sorting</title>
+</head>
+<body>
+
+<script>
+    function sortArray() {
+        // Get user input for the array
+        var userInput = prompt("Enter NUMBERS SEPERATED BY COMMAS:");
+        var userArray = userInput.split(',').map(Number);
+
+        // Sorting in descending order without arrow function
+        userArray.sort(function(a, b) {
+            return b - a;
+        });
+
+        // Display the sorted array
+        alert("Sorted array in descending order: " + userArray);
+    }
+
+    // Call the function when the page loads
+    window.onload = sortArray;
+</script>
+
+</body>
+</html>
